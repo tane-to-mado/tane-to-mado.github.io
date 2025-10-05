@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>劇団 種と窓</title>
+  </head>
+  <body>
+    <div id="key-visual">
+      <div id="window">
+        <div id="seeds">
+          <div class="seed"></div>
+          <div class="seed"></div>
+          <div class="seed"></div>
+          <div class="seed"></div>
+        </div>
+      </div>
+      <p id="name">劇団 種と窓</p>
+    </div>
+    <main id="main">
+      <slot />
+    </main>
+  </body>
+</html>
+
+<style is:global>
+  @import url("https://fonts.googleapis.com/css2?family=Klee+One&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    background-color: #ece9cc;
+  }
+
+  body {
+    padding-bottom: 25vh;
+  }
+
+  #key-visual {
+    width: 100%;
+    height: 100vh;
+    border-top: solid 1px transparent;
+  }
+
+  #window {
+    width: 50%;
+    height: 50vh;
+    border: solid 2px #ece9cc;
+    outline: solid 30px black;
+    margin: 0 auto;
+    margin-top: calc(25vh - 25px);
+    margin-bottom: 30px;
+    position: relative;
+  }
+
+  #window::after {
+    content: "";
+    display: block;
+    inset: 0;
+    position: absolute;
+    opacity: 0.8;
+    background-image: url("/images/key-visual.png");
+    background-size: cover;
+    background-position: center bottom;
+    z-index: 1;
+  }
+
+  #seeds {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    animation: float 20s linear infinite normal;
+  }
+
+  .seed {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: black;
+    border: solid 2px #ece9cc;
+  }
+
+  @keyframes float {
+    0% {
+      transform: rotateZ(0);
+    }
+    100% {
+      transform: rotateZ(360deg);
+    }
+  }
+
+  #name {
+    position: relative;
+    z-index: 0;
+    font-family: "Klee One";
+    font-size: 24px;
+    margin: 0;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  #main {
+    margin: 0 0.5em;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 5em;
+  }
+
+  #main h2 {
+    font-size: 1.5em;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    border-bottom: solid 1px black;
+    padding-bottom: 0.2em;
+  }
+
+  #main h3 {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+  }
+
+  #main p,
+  #main li {
+    font-family: "Source Code Pro", monospace;
+    line-height: 1.8em;
+    font-weight: 300;
+    font-size: 1em;
+    margin-bottom: 1em;
+  }
+
+  #main ul {
+    padding-left: 1.2em;
+    margin-bottom: 1em;
+  }
+
+  #main a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: dashed 1px currentColor;
+    font-weight: bold;
+  }
+
+  #main a:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+
+  #main p {
+    white-space: pre-wrap;
+    white-space-collapse: preserve;
+  }
+
+  #main a::after {
+    display: inline-block;
+    content: "";
+    width: 0.9em;
+    height: 0.9em;
+    background: no-repeat center/contain
+      url("data:image/svg+xml,%3csvg width='20' height='20' viewBox='0 0 20 20' fill='currentColor' xmlns='http://www.w3.org/2000/svg' data-rtl-flip='' class='block h-[0.75em] w-[0.75em] stroke-current stroke-[0.75]'%3e%3cpath d='M14.3349 13.3301V6.60645L5.47065 15.4707C5.21095 15.7304 4.78895 15.7304 4.52925 15.4707C4.26955 15.211 4.26955 14.789 4.52925 14.5293L13.3935 5.66504H6.66011C6.29284 5.66504 5.99507 5.36727 5.99507 5C5.99507 4.63273 6.29284 4.33496 6.66011 4.33496H14.9999L15.1337 4.34863C15.4369 4.41057 15.665 4.67857 15.665 5V13.3301C15.6649 13.6973 15.3672 13.9951 14.9999 13.9951C14.6327 13.9951 14.335 13.6973 14.3349 13.3301Z'%3e%3c/path%3e%3c/svg%3e");
+  }
+</style>
