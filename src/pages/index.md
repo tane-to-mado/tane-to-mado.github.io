@@ -52,7 +52,7 @@ title: "劇団 種と窓"
 
 詳細は、下記のリンクよりご覧ください。
 
-👉 <a href="https://company.tane-to-mado.com/">株式会社うたたねとまどろみ 特設ページへ</a>
+👉 <a href="https://corp.tane-to-mado.com/">株式会社うたたねとまどろみ 特設ページへ</a>
 
 ## お問い合わせ
 
