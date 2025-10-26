@@ -52,10 +52,10 @@ title: "劇団 種と窓"
 
 詳細は、下記のリンクよりご覧ください。
 
-👉 <a href="https://corp.tane-to-mado.com/">株式会社うたたねとまどろみ 特設ページへ</a>
+👉 <a href="https://corp.imaginary-void.com/">株式会社うたたねとまどろみ 特設ページへ</a>
 
 ## お問い合わせ
 
 公演・取材・コラボレーション・参加に関するお問い合わせは、以下までご連絡ください。
 
-📧 tane-to-mado@imaginary-void.com
+📧 company@imaginary-void.com
